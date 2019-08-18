@@ -20,7 +20,7 @@ function RenderComments({comments, dishId}){
         let list = comments.map((comments)=>{
             return(
                 <li key={comments.id} >
-                    <div>
+                    <div className="container">
                         <p>{comments.comment}</p>
                         <p>--{comments.author},
                         {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comments.date)))}</p>
