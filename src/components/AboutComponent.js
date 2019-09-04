@@ -6,7 +6,6 @@ function About(props) {
     function RenderLeader({ leader }) {
         return(
             <Media className="mt-5">
-                <div>
                     <Media left className="mr-5">
                         <Media object src={leader.image} alt={leader.name} />
                     </Media>
@@ -15,7 +14,6 @@ function About(props) {
                         <p>{leader.designation}</p>
                         {leader.description}
                     </Media>
-                </div>
             </Media>  
         );
     }
