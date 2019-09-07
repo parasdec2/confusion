@@ -82,7 +82,7 @@ class CommentForm extends Component {
                                 </Label>
                                 <Col md={12}>
                                 <Control.textarea model=".comment" id="comment" name="comment"
-                                    rows={5} className="form-control" />
+                                    rows={6} className="form-control" />
                                 </Col>
                             </Row>
                             <Button type="submit" value="submit" color="primary">
