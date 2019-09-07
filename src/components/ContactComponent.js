@@ -72,16 +72,15 @@ class Contact extends Component {
         if (this.state.touched.telnum && !reg.test(telnum))
             errors.telnum = 'Tel. Number should contain only numbers'
         
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if (this.state.touched.email && !mailformat.test(email)) 
-            errors.email = 'Invalid email format'
+        if (this.state.touched.email && email.split('').filter(x => x === '@').length !== 1) 
+            errors.email = 'Email should contain a @';
         
         
         return errors;
     }
 
     render() {
-        const errors = this.validate(this.state.firstname, this.state.lastname, this.state.telnum, this.setState.email)
+        const errors = this.validate(this.state.firstname, this.state.lastname, this.state.telnum, this.state.email)
         return(
             <div className="container">
                 <div className="row">
