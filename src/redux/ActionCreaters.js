@@ -95,7 +95,7 @@ export const fetchComments = () => (dispatch) => {
           throw error;
         }
       },
-      error => {
+      error => {    
             var errmess = new Error(error.message);
             throw errmess;
       })
